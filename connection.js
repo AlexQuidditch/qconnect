@@ -24,7 +24,7 @@ const logger = Logger.getLogger(__filename);
  *
  * @type {string}
  */
-export const DISCO_JIBRI_FEATURE = 'http://jitsi.org/protocol/jibri';
+export const DISCO_JIBRI_FEATURE = 'http://qtconnect.ru/protocol/jibri';
 
 /**
  * Checks if we have data to use attach instead of connect. If we have the data

@@ -1,11 +1,12 @@
 /* eslint-disable flowtype/no-types-missing-file-annotation */
 /* eslint-disable react/no-multi-comp */
 import React, { FC, useState } from 'react';
-import stringify from '../../../../modules/helpers/stringify.ts';
+// @ts-ignore
+import stringify from '../../../../modules/util/qs';
 
 enum HooksNames {
-    username = 'username', 
-    email = 'email', 
+    username = 'username',
+    email = 'email',
     password = 'password',
     referral = 'referral'
 }
@@ -56,7 +57,7 @@ const Register: FC<Props> = ({ closeRegisterWindow }: Props) => {
         if (referral) body.referral = referral;
 
         const query = stringify(body);
-        
+
         const res = await fetch(`https://api.quasaria.ru/api/query/user/register`, {
             method: 'POST',
             headers: {

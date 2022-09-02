@@ -3,7 +3,7 @@
 import React from 'react';
 import type { Dispatch } from 'redux';
 
-import { isDomainPremium } from '../../../../../limitations.ts';
+import { isDomainPremium } from '../../../../../modules/API/limitations.ts';
 import { openDialog, Dialog } from '../../../base/dialog';
 import { translate } from '../../../base/i18n';
 import { IconShareVideo } from '../../../base/icons';

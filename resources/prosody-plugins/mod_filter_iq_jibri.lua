@@ -9,7 +9,7 @@ local accepted_rayo_iq_token_issuers = module:get_option_array("accepted_rayo_iq
 module:hook("pre-iq/full", function(event)
     local stanza = event.stanza;
     if stanza.name == "iq" then
-        local jibri = stanza:get_child('jibri', 'http://jitsi.org/protocol/jibri');
+        local jibri = stanza:get_child('jibri', 'http://qtconnect.ru/protocol/jibri');
         if jibri then
             local session = event.origin;
             local token = session.auth_token;

@@ -143,7 +143,7 @@ function get_concurrent_outgoing_count(context_user, context_group)
                     for _, occupant in room:each_occupant() do
                         for _, presence in occupant:each_session() do
 
-                            local initiator = presence:get_child('initiator', 'http://jitsi.org/protocol/jigasi');
+                            local initiator = presence:get_child('initiator', 'http://qtconnect.ru/protocol/jigasi');
 
                             local found_user = false;
                             local found_group = false;

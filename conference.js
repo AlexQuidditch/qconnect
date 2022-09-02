@@ -5,7 +5,7 @@ import EventEmitter from 'events';
 import Logger from 'jitsi-meet-logger';
 
 import { openConnection } from './connection';
-import { isDomainPremium } from './limitations.ts';
+import { isDomainPremium } from './modules/API/limitations.ts';
 import { ENDPOINT_TEXT_MESSAGE_NAME } from './modules/API/constants';
 import { AUDIO_ONLY_SCREEN_SHARE_NO_TRACK } from './modules/UI/UIErrors';
 import AuthHandler from './modules/UI/authentication/AuthHandler';

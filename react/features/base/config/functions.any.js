@@ -32,7 +32,7 @@ export function createFakeConfig(baseURL: string) {
             muc: `conference.${url.hostname}`
         },
         bosh: `${baseURL}http-bind`,
-        clientNode: 'https://jitsi.org/jitsi-meet',
+        clientNode: 'https://qtconnect.ru/jitsi-meet',
         p2p: {
             enabled: true
         }

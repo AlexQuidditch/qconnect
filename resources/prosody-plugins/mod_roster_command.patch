@@ -1,5 +1,5 @@
 # HG changeset patch
-# User Boris Grozev <boris@jitsi.org>
+# User Boris Grozev <boris@qtconnect.ru>
 # Date 1609874100 21600
 #      Tue Jan 05 13:15:00 2021 -0600
 # Node ID f646babfc401494ff33f2126ef6c4df541ebf846
@@ -44,4 +44,4 @@ diff -r 456b9f608fcf -r f646babfc401 mod_roster_command/mod_roster_command.lua
 +        end
  	end
  end
- 
+

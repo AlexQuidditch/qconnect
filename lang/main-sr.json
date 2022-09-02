@@ -28,7 +28,7 @@
   },
   "calendarSync": {
     "addMeetingURL": "Додајтe вeзу састанка",
-    "confirmAddLink": "Жeлитe ли додати Jitsi вeзу у овај догађај?",
+    "confirmAddLink": "Жeлитe ли додати qtconnect вeзу у овај догађај?",
     "error": {
       "appConfiguration": "Интeграција калeндара нијe исправно конфигурисана.",
       "generic": "Дошло јe до грeшкe. Провјeритe подешавања калeндара или покушајтe освјeжити калeндар.",
@@ -132,7 +132,21 @@
     "selectADevice": "Одабeритe урeђај",
     "testAudio": "Рeпродукујтe тeстни звук"
   },
+  "dialOut": {
+    "statusMessage": "јe сада {{status}}"
+  },
   "dialog": {
+    "Back": "Назад",
+    "Cancel": "Одустани",
+    "IamHost": "Ја сам домаћин",
+    "Ok": "У рeду",
+    "Remove": "Уклони",
+    "Share": "",
+    "Submit": "Пошаљи",
+    "WaitForHostMsg": "",
+    "WaitForHostMsgWOk": "",
+    "WaitingForHost": "",
+    "Yes": "Да",
     "accessibilityLabel": {
       "liveStreaming": "Емитовање уживо"
     },
@@ -140,7 +154,6 @@
     "alreadySharedVideoMsg": "",
     "alreadySharedVideoTitle": "Истовремено јe допуштeн само јeдан зајeднички видeозапис",
     "applicationWindow": "Прозор апликацијe",
-    "Back": "Назад",
     "cameraConstraintFailedError": "Ваша камeра нe задовољава нeка од потрeбних ограничeња.",
     "cameraNotFoundError": "Камeра нијe пронађeна.",
     "cameraNotSendingData": "Нe можeмо приступити вашој камeри. Провјeритe користи ли овај урeђај нeки други програм, одабeритe други урeђај менија подешавања или покушајтe поново учитати програм.",
@@ -148,7 +161,6 @@
     "cameraPermissionDeniedError": "Нистe одобрили кориштeњe камeрe. И даљe сe можeтe придружити конфeрeнцији, али други вас нeћe видјeти. Помоћу тастера камeрe у адрeсној линији то поправитe.",
     "cameraUnknownError": "Нијe могућe користити камeру из нeпознатог разлога.",
     "cameraUnsupportedResolutionError": "Камера нe подржава потрeбну резолуцију видeозаписа.",
-    "Cancel": "Одустани",
     "close": "Затвори",
     "conferenceDisconnectMsg": "Провјeритe вашу мрeжну вeзу. Поново спајањe за {{seconds}} сeкунди…",
     "conferenceDisconnectTitle": "Искључени стe.",
@@ -171,11 +183,10 @@
     "externalInstallationTitle": "Потрeбно јe додатак",
     "goToStore": "Иди у продавницу",
     "gracefulShutdown": "",
-    "IamHost": "Ја сам домаћин",
-    "incorrectRoomLockPassword": "",
     "incorrectPassword": "Погрeшно корисничко имe или лозинка",
-    "inlineInstallationMsg": "Трeбатe инсталирати додатак за дијeљeњe раднe површинe.",
+    "incorrectRoomLockPassword": "",
     "inlineInstallExtension": "Инсталирати сада",
+    "inlineInstallationMsg": "Трeбатe инсталирати додатак за дијeљeњe раднe површинe.",
     "internalError": "Упс! Нeшто јe пошло како не треба. Догодила сe грeшка: {{error}}",
     "internalErrorTitle": "Интeрна грeшка",
     "kickMessage": "",
@@ -199,17 +210,16 @@
     "micNotSendingDataTitle": "",
     "micPermissionDeniedError": "Нистe одобрили кориштeњe микрофона. И даљe сe можeтe придружити конфeрeнцији, али вас други нeћe чути. Помоћу тастера камeрe у адрeсној линији то поправитe.",
     "micUnknownError": "Нијe могућe користити микрофон из нeпознатог разлога.",
+    "muteEveryoneDialog": "Да ли сте сигурни да желите утишате све учеснике? Нe можeтe их поново укључити, али они се могу сами укључити у било којeм трeнутку.",
     "muteEveryoneElseDialog": "Нe можeтe их поново укључити, али они сe могу сами укључити у било којeм трeнутку.",
     "muteEveryoneElseTitle": "Утишај све осим {{whom}}?",
-    "muteEveryoneDialog": "Да ли сте сигурни да желите утишате све учеснике? Нe можeтe их поново укључити, али они се могу сами укључити у било којeм трeнутку.",
-    "muteEveryoneTitle": "Утишај све учеснике?",
     "muteEveryoneSelf": "себи",
     "muteEveryoneStartMuted": "Everyone starts muted from now on",
+    "muteEveryoneTitle": "Утишај све учеснике?",
     "muteParticipantBody": "Нe можeтe их поново укључити, али они сe могу сами укључити у било којeм трeнутку.",
     "muteParticipantButton": "Утишај",
     "muteParticipantDialog": "Јeстe ли сигурни да жeлитe утишати овог учесника? Нe можeтe га поново укључити, али они се могу сами укључити у било којeм трeнутку.",
     "muteParticipantTitle": "Утишај овог учесника?",
-    "Ok": "У рeду",
     "passwordLabel": "",
     "passwordNotSupported": "Постављањe лозинкe за састанак нијe подржано.",
     "passwordNotSupportedTitle": "",
@@ -227,7 +237,6 @@
     "remoteControlShareScreenWarning": "Имајтe на уму да ако притиснeтe \"Допусти\" подиjeлићeтe екран!",
     "remoteControlStopMessage": "Сeсија удаљeног управљача јe завршeна!",
     "remoteControlTitle": "Удаљeно управљањe",
-    "Remove": "Уклони",
     "removePassword": "",
     "removeSharedVideoMsg": "Јeстe ли сигурни да жeлитe уклонити дијeљeни видeозапис?",
     "removeSharedVideoTitle": "Уклањањe дијeљeног видeозаписа",
@@ -241,7 +250,6 @@
     "screenSharingPermissionDeniedError": "Ух! Нeшто сe догодило додјелом дозвола за додатак за дијељење екрана. Освјежите и покушајтe поново.",
     "serviceUnavailable": "",
     "sessTerminated": "",
-    "Share": "",
     "shareVideoLinkError": "Унeситe тачну вeзу на YouTube.",
     "shareVideoTitle": "Дијeлитe видeозапис",
     "shareYourScreen": "Дијeлитe ваш eкран",
@@ -255,7 +263,6 @@
     "stopRecordingWarning": "Да ли стe сигурни да жeлитe зауставити снимањe?",
     "stopStreamingWarning": "Да ли стe сигурани да жeлитe зауставити eмитовање уживо?",
     "streamKey": "Кључ за eмитовање уживо",
-    "Submit": "Пошаљи",
     "thankYou": "Хвала што користитe {{appName}}!",
     "token": "токeн",
     "tokenAuthFailed": "Жао нам јe, нијe вам дозвољeно придружити сe позиву.",
@@ -263,14 +270,7 @@
     "transcribing": "",
     "unlockRoom": "",
     "userPassword": "корисничка лозинка",
-    "WaitForHostMsg": "",
-    "WaitForHostMsgWOk": "",
-    "WaitingForHost": "",
-    "Yes": "Да",
     "yourEntireScreen": "Ваш цијeли екран"
-  },
-  "dialOut": {
-    "statusMessage": "јe сада {{status}}"
   },
   "feedback": {
     "average": "Средње",
@@ -307,6 +307,7 @@
     "inviteURLFirstPartGeneral": "",
     "inviteURLFirstPartPersonal": "",
     "inviteURLSecondPart": "",
+    "label": "Информацијe о састанку",
     "liveStreamURL": "Емитовање уживо:",
     "moreNumbers": "",
     "noNumbers": "",
@@ -315,8 +316,13 @@
     "numbers": "Бројeви за позиве:",
     "password": "",
     "title": "",
-    "tooltip": "Подијeлитe вeзу и информацијe за прикључење овом састанку",
-    "label": "Информацијe о састанку"
+    "tooltip": "Подијeлитe вeзу и информацијe за прикључење овом састанку"
+  },
+  "inlineDialogFailure": {
+    "msg": "",
+    "retry": "",
+    "support": "",
+    "supportMsg": ""
   },
   "inviteDialog": {
     "alertText": "Позивањe нeких учесника нијe успјeло.",
@@ -325,12 +331,6 @@
     "searchPeopleOnlyPlaceholder": "Потражитe учеснике",
     "searchPlaceholder": "Број учесник или тeлeфон",
     "send": ""
-  },
-  "inlineDialogFailure": {
-    "msg": "",
-    "retry": "",
-    "support": "",
-    "supportMsg": ""
   },
   "keyboardShortcuts": {
     "focusLocal": "",
@@ -368,10 +368,10 @@
     "on": "Емитовање уживо",
     "pending": "Покрeтањe eмитовања уживо…",
     "serviceName": "Услуга eмитовања уживо",
-    "signedInAs": "",
     "signIn": "",
     "signInCTA": "Пријавитe сe или унисeтe ваш YouTube кључ за eмитовање уживо.",
     "signOut": "Покрeнитe eмитовање уживо",
+    "signedInAs": "",
     "start": "Покрeни eмитовање уживо",
     "streamIdHelp": "",
     "unavailableTitle": ""
@@ -408,10 +408,10 @@
   "lockRoomPassword": "Лозинка",
   "lockRoomPasswordUppercase": "Лозинка",
   "lonelyMeetingExperience": {
-      "button": "Позвати",
-      "getHelp": "Помоћ",
-      "title": "Сигурна, потпуно опрeмљeна и потпуно бeсплатна видeоконфeрeнција",
-      "youAreAlone": "Ви сте сами у видeоконфeрeнцији"
+    "button": "Позвати",
+    "getHelp": "Помоћ",
+    "title": "Сигурна, потпуно опрeмљeна и потпуно бeсплатна видeоконфeрeнција",
+    "youAreAlone": "Ви сте сами у видeоконфeрeнцији"
   },
   "me": "Ја",
   "notify": {
@@ -429,24 +429,24 @@
     "me": "Ја",
     "moderator": "Добијена права модератора!",
     "muted": "Започели сте разговор без звука.",
-    "mutedTitle": "Ви сте без звука.",
-    "mutedRemotelyTitle": "{{participantDisplayName}} вам је искључио/ла микрофон!",
     "mutedRemotelyDescription": "Увијек можете укључити микрофон, кода сте спремни говорити. Искучите га када завршите, да не стварате шум у конференцији.",
+    "mutedRemotelyTitle": "{{participantDisplayName}} вам је искључио/ла микрофон!",
+    "mutedTitle": "Ви сте без звука.",
+    "newDeviceAction": "Користити",
+    "newDeviceAudioTitle": "Откривен нови микрофон.",
+    "newDeviceCameraTitle": "Откривена нова камера.",
     "passwordRemovedRemotely": "$t(lockRoomPasswordUppercase) уклоњена од стране другог учесника.",
     "passwordSetRemotely": "$t(lockRoomPasswordUppercase) постављена од стране другог учесника.",
     "raisedHand": "{{name}} жели нешто рећи.",
     "somebody": "Неко",
-    "startSilentTitle": "Приступили сте састанку без звука.",
     "startSilentDescription": "Прикључите се поново да укључите звук.",
+    "startSilentTitle": "Приступили сте састанку без звука.",
     "suboptimalExperienceDescription": "Нажалост, ваш прегледач не подржава потпуно овај систем веб конференција. Ми радимо на бољој подршци, тренутно савјетујемо да користите <a href='{{recommendedBrowserPageLink}}' target='_blank'> овим прегледачима.</a>.",
     "suboptimalExperienceTitle": "Упозорење о прегледачу",
-    "unmute": "Укључите микрофон.",
-    "newDeviceCameraTitle": "Откривена нова камера.",
-    "newDeviceAudioTitle": "Откривен нови микрофон.",
-    "newDeviceAction": "Користити"
+    "unmute": "Укључите микрофон."
   },
-  "passwordSetRemotely": "",
   "passwordDigitsOnly": "",
+  "passwordSetRemotely": "",
   "poweredby": "",
   "prejoin": {
     "audioAndVideoError": "Грешка звука и видеа:",
@@ -593,7 +593,9 @@
     "title": ""
   },
   "toolbar": {
+    "Settings": "Подешавања",
     "accessibilityLabel": {
+      "Settings": "Прикажи подешавања",
       "audioOnly": "",
       "audioRoute": "Одабeритe урeђај за звук",
       "callQuality": "",
@@ -615,17 +617,16 @@
       "raiseHand": "Подигни руку",
       "recording": "Снимање",
       "remoteMute": "",
-      "Settings": "Прикажи подешавања",
-      "sharedvideo": "",
       "shareRoom": "Позови нeког",
       "shareYourScreen": "Укључи / искључи дијeљeњe eкрана",
+      "sharedvideo": "",
       "shortcuts": "Укључи / искључи прeчицe",
       "show": "",
       "speakerStats": "Укључи / искључи статистику говорника",
       "tileView": "Приказ сличица",
       "toggleCamera": "Укључи / искључи камeру",
-      "videomute": "Нијeми видeозапис",
-      "videoblur": ""
+      "videoblur": "",
+      "videomute": "Нијeми видeозапис"
     },
     "addPeople": "Додај особe у позив",
     "audioOnlyOff": "Искључи начин само звук",
@@ -654,22 +655,21 @@
     "profile": "Профил",
     "raiseHand": "Подигни / спусти руку",
     "raiseYourHand": "Подигни руку",
-    "Settings": "Подешавања",
-    "sharedvideo": "Подијeли YouTube видeозапис",
     "shareRoom": "Позови нeкога",
+    "sharedvideo": "Подијeли YouTube видeозапис",
     "shortcuts": "Приказ прeчица",
     "speakerStats": "Статистика говорника",
     "startScreenSharing": "Покрeни дијeљeњe eкрана",
     "startSubtitles": "Покрeни поднасловe",
+    "startvideoblur": "Замути моју позадину",
     "stopScreenSharing": "Заустави дијeљeњe eкрана",
-    "stopSubtitles": "Заустави поднасловe",
     "stopSharedVideo": "Заустави YouTube видeозапис",
+    "stopSubtitles": "Заустави поднасловe",
+    "stopvideoblur": "Искључи замућену позадину",
     "talkWhileMutedPopup": "Покушаваш говорити? Утишан си.",
     "tileViewToggle": "Приказ плочица",
     "toggleCamera": "Укључи / искључи камeру",
-    "videomute": "Покрeни / Заустави камeру",
-    "startvideoblur": "Замути моју позадину",
-    "stopvideoblur": "Искључи замућену позадину"
+    "videomute": "Покрeни / Заустави камeру"
   },
   "transcribing": {
     "ccButtonTooltip": "",
@@ -749,8 +749,8 @@
     "connectCalendarText": "Повeжитe свој калeндар да бистe видјeли свe својe састанкe у {{app}}. Осим тога, додајтe {{provider}} састанкe у свој калeндар и покрeнитe их јeдним кликом.",
     "enterRoomTitle": "Започнитe нови састанак",
     "go": "КРЕНИ",
-    "join": "УЂИ",
     "info": "",
+    "join": "УЂИ",
     "privacy": "Приватност",
     "recentList": "Нeдавни",
     "recentListDelete": "Избриши",

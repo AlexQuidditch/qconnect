@@ -1,164 +1,159 @@
+/* eslint-disable require-jsdoc */
 /* eslint-disable flowtype/no-types-missing-file-annotation */
 /* eslint-disable react/no-multi-comp */
 import React, {
-  useState,
-  FC,
-  ChangeEvent,
+    useState,
+    ChangeEvent,
+    useCallback
 } from 'react';
 
-import { isDomainPremium, premiumDomain, isUserPaid } from '../../../../limitations.ts';
+import { getUserByHash, isDomainPremium, isUserPaid, redirectToPremium } from '../../../../modules/API/limitations.ts';
 
 interface Props {
-  closeLoginPrompt: () => void
+  onCloseLoginPrompt: () => void
 }
 
 interface InnerProps extends Props {
+  error: string,
   handleInput: (e: ChangeEvent<HTMLInputElement>) => void,
   handleSubmit: () => void,
-  isEnteringCode: boolean,
-  error: string
+  isEnteringCode: boolean
 }
 
 interface RequestOptions {
   address: string,
   body: any,
-  error: string,
-  callback: () => void
+  callback: () => void,
+  error: string
 }
 
-const BOT_URL = 'https://bot.quasaria.ru/bot'
+const BOT_URL = 'https://bot.quasaria.ru/bot';
 
-async function requestApi(address: string, body: any) {
-  const request = await fetch([BOT_URL, 'connect', address].join('/'), {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(body)
-  });
-
-  return request.json();
-}
-
-async function checkAfterLogin(closeLoginPrompt: () => void) {
-  const isPaid = await isUserPaid();
-
-  console.log({ isPaid })
-
-  if (!isDomainPremium && isPaid) {
-    const username = localStorage.getItem('username');
-    const res = await fetch([BOT_URL, 'redirect', 'get-hash'].join('/'), {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json'
-      },
-      body: JSON.stringify({ username })
+async function requestApi(address: string, body: any): Promise<any> {
+    const request = await fetch([ BOT_URL, 'connect', address ].join('/'), {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
     });
 
-    const result = await res.json();
-
-    if (result.hash) {
-      window.location.href = premiumDomain + `?userHash=${result.hash}`;
-    } else {
-      closeLoginPrompt();
-    }
-  } else {
-    closeLoginPrompt();
-  }
+    return request.json();
 }
 
-const Login: FC<Props> = ({ closeLoginPrompt }: Props) => {
-  const [ loginName, changeLoginName ] = useState('');
-  const [ confirmationCode, changeConfirmationCode ] = useState('');
-  const [ isEnteringCode, changeIsEnteringCode ] = useState(false);
-  const [ error, setError ] = useState('');
+async function checkAfterLogin(closeLoginPrompt: () => void): Promise<void> {
+    const isPaid = await isUserPaid();
 
-  const options: { [key: string]: RequestOptions } = {
-    login: {
-      address: 'send-code',
-      body: {
-        username: loginName
-      },
-      callback: () => {
-        changeIsEnteringCode(true);
-        setError('');
-      },
-      error: 'Пользователь не найден'
-    },
-    code: {
-      address: 'check-code',
-      body: {
-        code: confirmationCode
-      },
-      callback: () => checkAfterLogin(closeLoginPrompt),
-      error: 'Неверный код'
-    }
-  };
+    console.log('checkAfterLogin:', { isPaid, isDomainPremium });
 
-  const handleSubmit = async () => {
-    const { login, code } = options;
-    const { address, body, callback, error: optionError } = isEnteringCode ? code : login;
+    if (!isDomainPremium && isPaid) {
+        const userHash = await getUserByHash();
 
-    const res = await requestApi(address, body);
+        console.log('checkAfterLogin:', { userHash });
 
-    if (res.status === 'OK') {
-      if (isEnteringCode) {
-        localStorage.setItem('username', res.username);
-      }
-
-      callback();
+        if (userHash) {
+            redirectToPremium({ userHash });
+        } else {
+            closeLoginPrompt();
+        }
     } else {
-      setError(optionError);
+        closeLoginPrompt();
     }
-  };
+}
 
-  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
+function Login({ onCloseLoginPrompt: closeLoginPrompt }: Props): JSX.Element {
+    const [ loginName, changeLoginName ] = useState('');
+    const [ confirmationCode, changeConfirmationCode ] = useState('');
+    const [ isEnteringCode, changeIsEnteringCode ] = useState(false);
+    const [ error, setError ] = useState('');
 
-    isEnteringCode ? changeConfirmationCode(value) : changeLoginName(value);
-  };
+    const options: { [key: string]: RequestOptions; } = {
+        login: {
+            address: 'send-code',
+            body: {
+                username: loginName
+            },
+            callback: () => {
+                changeIsEnteringCode(true);
+                setError('');
+            },
+            error: 'Пользователь не найден'
+        },
+        code: {
+            address: 'check-code',
+            body: {
+                code: confirmationCode
+            },
+            callback: () => checkAfterLogin(closeLoginPrompt),
+            error: 'Неверный код'
+        }
+    };
 
-  return (
-    <InnerLogin
-      closeLoginPrompt={closeLoginPrompt}
-      error={error}
-      handleInput={handleInput}
-      handleSubmit={handleSubmit}
-      isEnteringCode={isEnteringCode} />
-  );
-};
+    const handleSubmit = useCallback(async () => {
+        const { login, code } = options;
+        const { address, body, callback, error: optionError } = isEnteringCode ? code : login;
 
-const InnerLogin: FC<InnerProps> = ({
-  closeLoginPrompt, handleInput, handleSubmit, error, isEnteringCode
-}: InnerProps) => (
-  <div className='login'>
-    <div className='login-form'>
-      <div className='login-top'>
-        <h2>Войти</h2>
-        <button
-          className='interactive close'
-          onClick={closeLoginPrompt}
-        >
-          Закрыть
-        </button>
-      </div>
+        const res = await requestApi(address, body);
 
-      <input
-        className='interactive login-input'
-        key={`isEnteringCode${isEnteringCode}`}
-        onChange={handleInput}
-        placeholder={isEnteringCode ? 'Код подтверждения' : 'Логин в telegram'}
-        type='text' />
+        if (res.status === 'OK') {
+            if (isEnteringCode) {
+                localStorage.setItem('username', res.username);
+            }
 
-      {error && <p className='error'>{error}</p>}
+            callback();
+        } else {
+            setError(optionError);
+        }
+    }, [ options, isEnteringCode ]);
 
-      <button
-        className='interactive login-submit'
-        onClick={handleSubmit}>
-        Отправить
-      </button>
-    </div>
-  </div>
-);
+    const handleInput = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+        const { value } = e.target;
+
+        isEnteringCode ? changeConfirmationCode(value) : changeLoginName(value);
+    }, [ isEnteringCode ]);
+
+    return (
+        <InnerLogin
+            error = { error }
+            handleInput = { handleInput }
+            handleSubmit = { handleSubmit }
+            isEnteringCode = { isEnteringCode }
+            onCloseLoginPrompt = { closeLoginPrompt } />
+    );
+}
+
+function InnerLogin({
+    onCloseLoginPrompt: closeLoginPrompt, handleInput, handleSubmit, error, isEnteringCode
+}: InnerProps): JSX.Element {
+    return (
+        <div className = 'login'>
+            <div className = 'login-form'>
+                <div className = 'login-top'>
+                    <h2>Войти</h2>
+                    <button
+                        className = 'interactive close'
+                        onClick = { closeLoginPrompt }>
+                        Закрыть
+                    </button>
+                </div>
+
+                <input
+                    className = 'interactive login-input'
+                    key = { `isEnteringCode${isEnteringCode}` }
+                    onChange = { handleInput }
+                    placeholder = { isEnteringCode ? 'Код подтверждения' : 'Логин в Telegram' }
+                    type = 'text' />
+
+                {error && <p className = 'error'>{error}</p>}
+
+                <button
+                    className = 'interactive login-submit'
+                    onClick = { handleSubmit }>
+                    Отправить
+                </button>
+            </div>
+        </div>
+    );
+}
 
 export default Login;

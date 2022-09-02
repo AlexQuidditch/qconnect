@@ -153,7 +153,7 @@ body.welcome-page {
 
         .tab-content {
             display: $welcomePageTabContentDisplay;
-            height: 250px;
+            // height: 250px;
             margin: 5px 0px;
             overflow: hidden;
             flex-grow: 1;
@@ -238,12 +238,12 @@ body.welcome-page {
             padding: 30px;
             background: linear-gradient(to top right, #232526, #414345);
             border-radius: 10px;
-    
+
             .close-container {
                 display: flex;
                 justify-content: flex-end;
                 width: 100%;
-    
+
                 .close {
                     border: none;
                     padding: 10px 20px;
@@ -253,7 +253,7 @@ body.welcome-page {
                     margin-bottom: 15px;
                 }
             }
-            
+
             p {
                 font-size: 16px;
             }
@@ -332,6 +332,7 @@ body.welcome-page {
         padding: 0 7vw;
 
         .main-title {
+            text-align: center;
             color: white;
             font-weight: 700;
             font-size: 20px;

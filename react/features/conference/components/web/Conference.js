@@ -3,7 +3,7 @@
 import _ from 'lodash';
 import React from 'react';
 
-import { maxPeopleAllowed, isDomainPremium } from '../../../../../limitations.ts';
+import { maxPeopleAllowed, isDomainPremium } from '../../../../../modules/API/limitations.ts';
 import VideoLayout from '../../../../../modules/UI/videolayout/VideoLayout';
 import { getConferenceNameForTitle } from '../../../base/conference';
 import { connect, disconnect } from '../../../base/connection';

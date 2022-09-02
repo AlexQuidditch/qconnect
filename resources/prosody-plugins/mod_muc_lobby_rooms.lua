@@ -31,7 +31,7 @@ local filters = require 'util.filters';
 local st = require 'util.stanza';
 local MUC_NS = 'http://jabber.org/protocol/muc';
 local DISCO_INFO_NS = 'http://jabber.org/protocol/disco#info';
-local DISPLAY_NAME_REQUIRED_FEATURE = 'http://jitsi.org/protocol/lobbyrooms#displayname_required';
+local DISPLAY_NAME_REQUIRED_FEATURE = 'http://qtconnect.ru/protocol/lobbyrooms#displayname_required';
 local LOBBY_IDENTITY_TYPE = 'lobbyrooms';
 local NOTIFY_JSON_MESSAGE_TYPE = 'lobby-notify';
 local NOTIFY_LOBBY_ENABLED = 'LOBBY-ENABLED';
@@ -72,7 +72,7 @@ function broadcast_json_msg(room, from, json_msg)
     if occupant then
         room:broadcast_message(
             st.message({ type = 'groupchat', from = occupant.nick })
-              :tag('json-message', {xmlns='http://jitsi.org/jitmeet'})
+              :tag('json-message', {xmlns='http://qtconnect.ru/jitmeet'})
               :text(json.encode(json_msg)):up());
     end
 end

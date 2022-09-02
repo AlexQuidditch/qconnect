@@ -65,7 +65,7 @@ type State = {
     showBrandWatermark: boolean,
 
     /**
-     * Whether or not the show the "powered by Jitsi.org" link.
+     * Whether or not the show the "powered by qtconnect.ru" link.
      */
     showPoweredBy: boolean
 };
@@ -163,21 +163,12 @@ class Watermarks extends Component<Props, State> {
         let reactElement = null;
 
         if (_showJitsiWatermark) {
-            const style = {
-                backgroundImage: `url(${_logoUrl})`,
-                width: 150,
-                height: 50
-            };
-
-            reactElement = (<div
-                className = 'watermark leftwatermark'
-                style = { style } />);
+            reactElement = (<img className='watermark leftwatermark' src='../../../../images/watermark.svg' />);
 
             if (_logoLink) {
                 reactElement = (
                     <a
-
-                        // href = { _logoLink }
+                        href = '/'
                         target = '_new'>
                         { reactElement }
                     </a>
@@ -201,9 +192,9 @@ class Watermarks extends Component<Props, State> {
             return (
                 <a
                     className = 'poweredby'
-                    href = 'http://jitsi.org'
+                    href= 'https://qtconnect.ru'
                     target = '_new'>
-                    <span>{ t('poweredby') } jitsi.org</span>
+                    <span>{ t('poweredby') } qtconnect.ru</span>
                 </a>
             );
         }

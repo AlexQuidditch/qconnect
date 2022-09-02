@@ -20,16 +20,16 @@
     "audioDevices": {
         "bluetooth": "Bluetooth",
         "headphones": "Entzungailuak",
+        "none": "Ez dago audio-gailurik erabilgarri",
         "phone": "Telefonoa",
-        "speaker": "Bozgorailua",
-        "none": "Ez dago audio-gailurik erabilgarri"
+        "speaker": "Bozgorailua"
     },
     "audioOnly": {
         "audioOnly": "Banda-zabalera txikia"
     },
     "calendarSync": {
         "addMeetingURL": "Bileraren esteka gehitu",
-        "confirmAddLink": "Jitsi esteka gertaera honetara gehitu nahi duzu?",
+        "confirmAddLink": "qtconnect esteka gertaera honetara gehitu nahi duzu?",
         "error": {
             "appConfiguration": "Egutegiaren integrazioa ez dago ondo konfiguratuta.",
             "generic": "Errore bat gertatu da. Egiaztatu zure egutegiaren ezarpenak edo saiatu egutegia eguneratzen.",
@@ -48,21 +48,21 @@
     "chat": {
         "error": "Errorea: zure mezua ez da bidali. Arrazoia: {{error}}",
         "fieldPlaceHolder": "Idatzi mezua hemen",
-        "messagebox": "Idatzi mezua",
         "messageTo": "Mezu pribatua {{recipient}}(e)ri",
-        "noMessagesMessage": "Bileran oraindik mezurik ez dago. Hasi elkarrizketa hemen!",
+        "messagebox": "Idatzi mezua",
         "nickname": {
             "popover": "Aukeratu goitizena",
             "title": "Sartu goitizena txata erabiltzeko"
         },
+        "noMessagesMessage": "Bileran oraindik mezurik ez dago. Hasi elkarrizketa hemen!",
         "privateNotice": "Mezu pribatua {{recipient}}(e)ri",
         "title": "Txata",
         "you": "zu"
     },
     "chromeExtensionBanner": {
-        "installExtensionText": "Instalatu luzapena Google Calendar eta Office 365rako integraziorako",
         "buttonText": "Instalatu Chrome luzapena",
-        "dontShowAgain": "Ez erakutsi hau berriro"
+        "dontShowAgain": "Ez erakutsi hau berriro",
+        "installExtensionText": "Instalatu luzapena Google Calendar eta Office 365rako integraziorako"
     },
     "connectingOverlay": {
         "joiningRoom": "Zure bilerara konektatzen…"
@@ -142,7 +142,21 @@
         "selectADevice": "Hautatu gailua",
         "testAudio": "Erreproduzitu proba-soinua"
     },
+    "dialOut": {
+        "statusMessage": "{{status}} dago"
+    },
     "dialog": {
+        "Back": "Atzera",
+        "Cancel": "Utzi",
+        "IamHost": "Ostalaria naiz",
+        "Ok": "Ados",
+        "Remove": "Kendu",
+        "Share": "Partekatu",
+        "Submit": "Bidali",
+        "WaitForHostMsg": "<b>{{room}}</b> konferentzia oraindik ez da hasi. Ostalaria bazara, autentifikatu. Bestela, itxaron ostalaria iritsi arte.",
+        "WaitForHostMsgWOk": "<b>{{room}}</b> konferentzia oraindik ez da hasi. Ostalaria bazara, sakatu Ados autentifikatu ahal izateko. Bestela, itxaron ostalaria iritsi arte.",
+        "WaitingForHost": "Ostalariaren zain …",
+        "Yes": "Bai",
         "accessibilityLabel": {
             "liveStreaming": "Zuzeneko Erreprodukzioa"
         },
@@ -150,7 +164,6 @@
         "alreadySharedVideoMsg": "Beste parte-hartzaile batek jada bideo bat partekatzen ari da. Konferentzia honek aldi berean bideo bakarra partekatzen uzten du.",
         "alreadySharedVideoTitle": "Aldi berean bideo bakarra partekatzea onartuta dago",
         "applicationWindow": "Aplikazio-leihoa",
-        "Back": "Atzera",
         "cameraConstraintFailedError": "Zure kamerak ez ditu eskakizun batzuk betetzen.",
         "cameraNotFoundError": "Kamera ez da aurkitu.",
         "cameraNotSendingData": "Ezin gara zure kamerara sartu. Egiaztatu beste aplikazio bat gailu hori erabiltzen ari den, hautatu beste gailu bat konfigurazio-menuan edo saiatu aplikazioa berriro kargatzen.",
@@ -158,7 +171,6 @@
         "cameraPermissionDeniedError": "Ez duzu baimenik eman zure kamera erabiltzeko. Hitzaldiarekin bat egin dezakezu, baina ezingo duzu ikusi. Erabili helbide-barran dagoen kamera botoia hau konpontzeko.",
         "cameraUnknownError": "Ezin da kamera erabili arrazoi ezezaguna dela eta.",
         "cameraUnsupportedResolutionError": "Zure kamerak ez du bideoaren bereizmena onartzen.",
-        "Cancel": "Utzi",
         "close": "Itxi",
         "conferenceDisconnectMsg": "Zure sare-konexioa egiaztatu dezakezu. Berriro konektatzen {{seconds}} segundotan…",
         "conferenceDisconnectTitle": "Deskonektatu zara.",
@@ -182,11 +194,10 @@
         "externalInstallationTitle": "Derrigorrezko luzapena",
         "goToStore": "Joan web dendara",
         "gracefulShutdown": "Zerbitzua ez dago erabilgarri mantentze-lanak direla eta. Saiatu berriro beranduago.",
-        "IamHost": "Ostalaria naiz",
-        "incorrectRoomLockPassword": "Pasahitza baliogabea",
         "incorrectPassword": "Erabiltzaile-izena edo pasahitza baliogabea",
-        "inlineInstallationMsg": "Mahaigaineko partekatze-luzapena instalatu behar duzu.",
+        "incorrectRoomLockPassword": "Pasahitza baliogabea",
         "inlineInstallExtension": "Instalatu orain",
+        "inlineInstallationMsg": "Mahaigaineko partekatze-luzapena instalatu behar duzu.",
         "internalError": "Hara! Arazoren bat egon da. Errore hau gertatu da: {{error}}",
         "internalErrorTitle": "Barne-errorea",
         "kickMessage": "{{participantDisplayName}} kontaktatu dezakezu xehetasun gehiagorentzat.",
@@ -210,17 +221,16 @@
         "micNotSendingDataTitle": "Zure mikrofonoa isilduta dago zure sistemaren ezarpenetan",
         "micPermissionDeniedError": "Ez duzu baimenik eman zure mikrofonoa erabiltzeko. Hitzaldiarekin bat egin dezakezu, baina ezingo duzu entzun. Erabili kameraren botoia helbide-barran hori konpontzeko.",
         "micUnknownError": "Ezin da mikrofonoa erabili, arrazoi ezezagunak direla eta.",
+        "muteEveryoneDialog": "Ziur denak mututu nahi dituzula? Ezin izango dituzu zuk desmututu, baina beraien burua desmutututzeko aukera izango dute.",
         "muteEveryoneElseDialog": "Mututu ondoren, ezin izango dituzu desmututu, baina beraien burua desmutututzeko aukera izango dute.",
         "muteEveryoneElseTitle": "Isilarazi guztiak {{whom}} izan ezik?",
-        "muteEveryoneDialog": "Ziur denak mututu nahi dituzula? Ezin izango dituzu zuk desmututu, baina beraien burua desmutututzeko aukera izango dute.",
-        "muteEveryoneTitle": "Isilarazi guztiak?",
         "muteEveryoneSelf": "zure burua",
         "muteEveryoneStartMuted": "Denak mutututa hasiko dira hemendik aurrera",
+        "muteEveryoneTitle": "Isilarazi guztiak?",
         "muteParticipantBody": "Ezin izango dituzu zuk desmututu, baina beraien burua desmutututzeko aukera izango dute.",
         "muteParticipantButton": "Isilarazi",
         "muteParticipantDialog": "Ziur parte-hartzaile hau mututu nahi duzula? Ezin izango duzu zuk desmututu, baina bereburua desmutututzeko aukera izango du.",
         "muteParticipantTitle": "Isilarazi parte-hartzaile hau?",
-        "Ok": "Ados",
         "passwordLabel": "Bilera parte-hartzaile batek blokeatu du. Sartu $t(lockRoomPassword) batzeko.",
         "passwordNotSupported": "$t(lockRoomPassword) bilera ezartzea ez da onartzen.",
         "passwordNotSupportedTitle": "$t(lockRoomPasswordUppercase) ezin da erabili",
@@ -238,7 +248,6 @@
         "remoteControlShareScreenWarning": "Kontuan izan \"Baimendu\" sakatzen baduzu zure pantaila partekatuko duzula!",
         "remoteControlStopMessage": "Urruneko kontrol saioa amaitu da!",
         "remoteControlTitle": "Urruneko mahaigain kontrola",
-        "Remove": "Kendu",
         "removePassword": "Kendu $t(lockRoomPassword)",
         "removeSharedVideoMsg": "Ziur partekatu duzun bideoa kendu nahi duzula?",
         "removeSharedVideoTitle": "Kendu partekatutako bideoa",
@@ -257,7 +266,6 @@
         "sendPrivateMessageTitle": "Bidali pribatuki?",
         "serviceUnavailable": "Zerbitzua ez erabilgarria",
         "sessTerminated": "Deia amaituta",
-        "Share": "Partekatu",
         "shareVideoLinkError": "Eman YouTube esteka zuzena.",
         "shareVideoTitle": "Partekatu bideoa",
         "shareYourScreen": "Partekatu zure pantaila",
@@ -271,7 +279,6 @@
         "stopRecordingWarning": "Ziur grabatzeari utzi nahi diozula?",
         "stopStreamingWarning": "Ziur zuzeneko erreprodukzioa gelditu nahi duzula?",
         "streamKey": "Zuzeneko erreprodukzioaren giltza",
-        "Submit": "Bidali",
         "thankYou": "Eskerrik asko {{appName}} erabiltzeagatik!",
         "token": "token",
         "tokenAuthFailed": "Ez duzu dei honetara elkartzeko baimenik.",
@@ -279,14 +286,7 @@
         "transcribing": "Transkripzioa",
         "unlockRoom": "Kendu bileraren $t(lockRoomPassword)",
         "userPassword": "erabiltzailearen pasahitza",
-        "WaitForHostMsg": "<b>{{room}}</b> konferentzia oraindik ez da hasi. Ostalaria bazara, autentifikatu. Bestela, itxaron ostalaria iritsi arte.",
-        "WaitForHostMsgWOk": "<b>{{room}}</b> konferentzia oraindik ez da hasi. Ostalaria bazara, sakatu Ados autentifikatu ahal izateko. Bestela, itxaron ostalaria iritsi arte.",
-        "WaitingForHost": "Ostalariaren zain …",
-        "Yes": "Bai",
         "yourEntireScreen": "Zure pantaila osoa"
-    },
-    "dialOut": {
-        "statusMessage": "{{status}} dago"
     },
     "documentSharing": {
         "title": "Partekatutako dokumentua"
@@ -302,6 +302,9 @@
         "rateExperience": "Puntuatu zure bileraren esperientzia",
         "veryBad": "Oso Txarra",
         "veryGood": "Oso ona"
+    },
+    "helpView": {
+        "header": "Laguntza gunea"
     },
     "incomingCall": {
         "answer": "Erantzun",
@@ -329,6 +332,7 @@
         "inviteURLFirstPartGeneral": "Bilera batera batzeko gonbidapena luzatu zaizu.",
         "inviteURLFirstPartPersonal": "{{name}} erabiltzaileak bilera batera gonbidatu zaitu.\n",
         "inviteURLSecondPart": "\nBilerara sartu:\n{{url}}\n",
+        "label": "Saioari buruzko informazioa",
         "liveStreamURL": "Zuzeneko erreprodukzioa:",
         "moreNumbers": "Zenbaki gehiago",
         "noNumbers": "Markatze-zenbakirik ez.",
@@ -337,8 +341,13 @@
         "numbers": "Markatze-zenbakiak",
         "password": "$t(lockRoomPasswordUppercase):",
         "title": "Partekatu",
-        "tooltip": "Partekatu estekaren eta markaketaren inguruko informazioa bilera honetarako",
-        "label": "Saioari buruzko informazioa"
+        "tooltip": "Partekatu estekaren eta markaketaren inguruko informazioa bilera honetarako"
+    },
+    "inlineDialogFailure": {
+        "msg": "Arazotxo bat izan dugu.",
+        "retry": "Saiatu berriro",
+        "support": "Laguntza",
+        "supportMsg": "Hau gertatzen jarraituz gero, jarri gurekin harremanetan"
     },
     "inviteDialog": {
         "alertText": "Ezin izan da parte hartzaile batzuk gonbidatu.",
@@ -347,12 +356,6 @@
         "searchPeopleOnlyPlaceholder": "Bilatu parte-hartzaileak",
         "searchPlaceholder": "Parte-hartzailea edo telefono zenbakia",
         "send": "Bidali"
-    },
-    "inlineDialogFailure": {
-        "msg": "Arazotxo bat izan dugu.",
-        "retry": "Saiatu berriro",
-        "support": "Laguntza",
-        "supportMsg": "Hau gertatzen jarraituz gero, jarri gurekin harremanetan"
     },
     "keyboardShortcuts": {
         "focusLocal": "Arreta jarri zure bideoan",
@@ -386,6 +389,7 @@
         "expandedPending": "Zuzeneko transmisioa abian da…",
         "failedToStart": "Zuzeneko transmisioak ezin izan du hasi",
         "getStreamKeyManually": "",
+        "googlePrivacyPolicy": "Google-en pribatutasun-politika",
         "invalidStreamKey": "Zuzeneko transmisioaren gakoa okerra izan daiteke.",
         "off": "Zuzeneko transmisioa gelditu da",
         "offBy": "{{name}} erabiltzaileak zuzeneko emanaldia gelditu du",
@@ -393,15 +397,14 @@
         "onBy": "{{name}} erabiltzaileak zuzeneko emanaldia hasi du",
         "pending": "Zuzeneko transmisioa abian…",
         "serviceName": "Zuzeneko transmisioa zerbitzua",
-        "signedInAs": "Honela hasi duzu saioa:",
         "signIn": "Hasi saioa Google-ekin",
         "signInCTA": "Hasi saioa edo sartu zure zuzeneko transmisioaren gakoa YouTube-tik.",
         "signOut": "Itxi saioa",
+        "signedInAs": "Honela hasi duzu saioa:",
         "start": "Hasi zuzeneko transmisioa",
         "streamIdHelp": "Zer da hau?",
         "unavailableTitle": "Zuzeneko transmisioa ez dago erabilgarri",
-        "youtubeTerms": "",
-        "googlePrivacyPolicy": "Google-en pribatutasun-politika"
+        "youtubeTerms": ""
     },
     "localRecording": {
         "clientState": {
@@ -434,8 +437,13 @@
     },
     "lockRoomPassword": "Pasahitza",
     "lockRoomPasswordUppercase": "Pasahitza",
+    "lonelyMeetingExperience": {
+        "button": "Gonbidatu beste batzuk",
+        "youAreAlone": "Bileran dagoen bakarra zara"
+    },
     "me": "ni",
     "notify": {
+        "OldElectronAPPTitle": "",
         "connectedOneMember": "{{name}} bilerara sartu da",
         "connectedThreePlusMembers": "{{name}} eta beste {{count}} bilerara sartu dira",
         "connectedTwoMembers": "{{first}} eta {{second}} bilerara sartu dira",
@@ -450,28 +458,27 @@
         "me": "Ni",
         "moderator": "Moderatzaile eskubideak emanda!",
         "muted": "Elkarrizketa mutututa hasi duzu.",
-        "mutedTitle": "Mutututa zaude!",
-        "mutedRemotelyTitle": "{{participantDisplayName}}(e)k mututu zaitu!",
         "mutedRemotelyDescription": "Hitz egiteko prest zaudenean mikrofonoa piztu dezakezu. Amaitzean berriz ere isilarazi ezazu bilerako zarata ekiditeko.",
+        "mutedRemotelyTitle": "{{participantDisplayName}}(e)k mututu zaitu!",
+        "mutedTitle": "Mutututa zaude!",
+        "newDeviceAction": "Erabilera",
+        "newDeviceAudioTitle": "Audio-gailu berria hauteman da",
+        "newDeviceCameraTitle": "Kamera berria hauteman da",
+        "oldElectronClientDescription1": "",
+        "oldElectronClientDescription2": "",
+        "oldElectronClientDescription3": "",
         "passwordRemovedRemotely": "$t(lockRoomPasswordUppercase) beste erabiltzaile batek kendu du",
         "passwordSetRemotely": "$t(lockRoomPasswordUppercase) beste erabiltzaile batek ezarri du",
         "raisedHand": "{{name}} erabiltzaileak hitz egin nahi du.",
         "somebody": "Norbait",
-        "startSilentTitle": "Audio irteerarik gabe batu zara!",
         "startSilentDescription": "Batu berriro audioa gaitzeko",
+        "startSilentTitle": "Audio irteerarik gabe batu zara!",
         "suboptimalBrowserWarning": "Bilera ez da ona izaten ari. Saiatu nabigatzaile egokiak erabiltzen <a href='{{recommendedBrowserPageLink}}' target='_blank'/a>.",
         "suboptimalExperienceTitle": "Nabigatzailearen abisua",
-        "unmute": "Desmututu",
-        "newDeviceCameraTitle": "Kamera berria hauteman da",
-        "newDeviceAudioTitle": "Audio-gailu berria hauteman da",
-        "newDeviceAction": "Erabilera",
-        "OldElectronAPPTitle": "",
-        "oldElectronClientDescription1": "",
-        "oldElectronClientDescription2": "",
-        "oldElectronClientDescription3": ""
+        "unmute": "Desmututu"
     },
-    "passwordSetRemotely": "beste parte-hartzaile batek ezarrita",
     "passwordDigitsOnly": "{{number}} digitu arte",
+    "passwordSetRemotely": "beste parte-hartzaile batek ezarrita",
     "poweredby": "garatzailea:",
     "prejoin": {
         "audioAndVideoError": "",
@@ -479,6 +486,7 @@
         "audioTrackError": "",
         "callMe": "",
         "callMeAtNumber": "",
+        "calling": "",
         "configuringDevices": "",
         "connectedWithAudioQ": "",
         "copyAndShare": "",
@@ -486,16 +494,15 @@
         "dialInPin": "",
         "dialing": "",
         "iWantToDialIn": "",
+        "initiated": "",
         "joinAudioByPhone": "",
         "joinMeeting": "",
         "joinWithoutAudio": "",
-        "initiated": "",
         "linkCopied": "",
         "lookGood": "",
         "or": "",
-        "calling": "",
-        "startWithPhone": "",
         "screenSharingError": "",
+        "startWithPhone": "",
         "videoOnlyError": "",
         "videoTrackError": "",
         "viewAllNumbers": ""
@@ -578,16 +585,16 @@
     },
     "settingsView": {
         "advanced": "Aurreratua",
-        "alertOk": "Ados",
         "alertCancel": "",
+        "alertOk": "Ados",
         "alertTitle": "Abisua",
         "alertURLText": "Zerbitzariaren URLa baliogabea da",
         "buildInfoSection": "Konpilazioaren informazioa",
         "conferenceSection": "",
         "disableCallIntegration": "Desgaitu jatorrizko deien integrazioa",
-        "disableP2P": "Desgaitu puntuz puntuko modua",
         "disableCrashReporting": "",
         "disableCrashReportingWarning": "",
+        "disableP2P": "Desgaitu puntuz puntuko modua",
         "displayName": "Bistaratzeko izena",
         "email": "Posta elektronikoa",
         "header": "Ezarpenak",
@@ -621,7 +628,9 @@
         "title": "Bideo-deia eten egin da ekipamendu hau gelditu delako"
     },
     "toolbar": {
+        "Settings": "Ezarpenak",
         "accessibilityLabel": {
+            "Settings": "Txandakatu ezarpenak",
             "audioOnly": "Txandakatu audioa soilik",
             "audioRoute": "Hautatu soinu-gailua",
             "callQuality": "Kudeatu bideoaren kalitatea",
@@ -649,18 +658,17 @@
             "raiseHand": "",
             "recording": "Grabaketa aktibatu",
             "remoteMute": "Mututu parte-hartzailea",
-            "Settings": "Txandakatu ezarpenak",
-            "sharedvideo": "Txandakatu YouTube bideoa partekatzen",
             "shareRoom": "norbait gonbidatu",
             "shareYourScreen": "Txandakatu pantaila partekatzea",
+            "sharedvideo": "Txandakatu YouTube bideoa partekatzen",
             "shortcuts": "Txandakatu lasterbideak",
             "show": "Erakutsi",
             "speakerStats": "Txandakatu hiztunen estatistikak",
             "tileView": "Txandakatu fitxa ikuspegia",
             "toggleCamera": "Txandakatu kamera",
             "toggleFilmstrip": "Txandakatu film-zerrenda",
-            "videomute": "Txandakatu mutututako bideoa",
-            "videoblur": "Txandakatu bideoaren lausotzea"
+            "videoblur": "Txandakatu bideoaren lausotzea",
+            "videomute": "Txandakatu mutututako bideoa"
         },
         "addPeople": "Gehitu jendea zure deira",
         "audioOnlyOff": "Gaitu audioa soilik modua",
@@ -689,35 +697,34 @@
         "moreOptions": "Aukera gehiago",
         "mute": "Isiltasuna aktibatu / desaktibatu",
         "muteEveryone": "Partehartzaile guztiak isildu",
-        "noAudioSignalTitle": "Mikrofonotik ez dago sarrerarik!",
         "noAudioSignalDesc": "Sistema edo gailuaren ezarpenetatik islatu ez baduzu, kontuan hartu gailua aldatzea.",
         "noAudioSignalDescSuggestion": "Sistema edo gailuaren ezarpenetatik islatu ez baduzu, kontuan hartu hurrengo gailua erabiltzea:",
         "noAudioSignalDialInDesc": "",
         "noAudioSignalDialInLinkDesc": "",
-        "noisyAudioInputTitle": "ingurune zaratatsua",
+        "noAudioSignalTitle": "Mikrofonotik ez dago sarrerarik!",
         "noisyAudioInputDesc": "ingurune zaratatsua",
+        "noisyAudioInputTitle": "ingurune zaratatsua",
         "openChat": "Ireki txata",
         "pip": "Irudi-irudian sartu",
         "privateMessage": "Bidali mezu pribatua",
         "profile": "Editatu zure profila",
         "raiseHand": "Altxa / jaitsi eskua",
         "raiseYourHand": "Altxatu eskua",
-        "Settings": "Ezarpenak",
-        "sharedvideo": "Partekatu YouTube bideoa",
         "shareRoom": "Gonbidatu norbait",
+        "sharedvideo": "Partekatu YouTube bideoa",
         "shortcuts": "Ikusi lasterbideak",
         "speakerStats": "Hizlariaren estatistikak",
         "startScreenSharing": "Hasi pantaila partekatzen",
         "startSubtitles": "Azpitituluak hasi",
+        "startvideoblur": "Bideo lausoa hasi",
         "stopScreenSharing": "Gelditu pantaila partekatzea",
-        "stopSubtitles": "Azpitituluak gelditu",
         "stopSharedVideo": "YouTuben bideoa gelditu",
+        "stopSubtitles": "Azpitituluak gelditu",
+        "stopvideoblur": "Bideo lausoa gelditu",
         "talkWhileMutedPopup": "Hitz egiten saiatzen ari al zara? Mututa zaude.",
         "tileViewToggle": "Txandakatu fitxa ikuspegia",
         "toggleCamera": "Txandakatu kamera",
-        "videomute": "Hasi / gelditu kamera",
-        "startvideoblur": "Bideo lausoa hasi",
-        "stopvideoblur": "Bideo lausoa gelditu"
+        "videomute": "Hasi / gelditu kamera"
     },
     "transcribing": {
         "ccButtonTooltip": "Hasi / Gelditu Azpitituluak",
@@ -798,27 +805,20 @@
         "connectCalendarText": "Konektatu egutegia zure bilera guztiak {{app}}en ikusteko. Gainera, gehitu {{provider}} bilerak zure egutegian eta hasi klik bakar batekin.",
         "enterRoomTitle": "Hasi bilera berria",
         "getHelp": "Lortu laguntza",
-        "roomNameAllowedChars": "Bileraren izenak ez du honelako karaktererik eduki behar: ?, &,:, ', \",%, #.",
         "go": "JOAN",
         "goSmall": "JOAN",
-        "join": "SORTU / SARTU",
         "info": "Informazioa",
+        "join": "SORTU / SARTU",
         "privacy": "Pribatutasuna",
         "recentList": "Azkenak",
         "recentListDelete": "Ezabatu",
         "recentListEmpty": "Azkenak zerrenda hutsik dago. Txateatu zure taldearekin eta azken bilera guztiak hemen aurkituko dituzu.",
         "reducedUIText": "Ongi etorri {{app}}era!",
+        "roomNameAllowedChars": "Bileraren izenak ez du honelako karaktererik eduki behar: ?, &,:, ', \",%, #.",
         "roomname": "Sartu gelaren izena",
         "roomnameHint": "Sartu batu nahi duzun gelaren izena edo URLa. Izen bat sor dezakezu eta bilerara sartuko diren pertsonei esaiezu, izen bera sartu dezaten.",
         "sendFeedback": "Bidali iritzia",
         "terms": "Baldintzak",
         "title": ""
-    },
-    "lonelyMeetingExperience": {
-        "button": "Gonbidatu beste batzuk",
-        "youAreAlone": "Bileran dagoen bakarra zara"
-    },
-    "helpView": {
-        "header": "Laguntza gunea"
     }
 }

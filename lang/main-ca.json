@@ -20,16 +20,16 @@
     "audioDevices": {
         "bluetooth": "Bluetooth",
         "headphones": "Auriculars",
+        "none": "No hi ha disponible cap aparell d'àudio",
         "phone": "Telèfon",
-        "speaker": "Altaveu",
-        "none": "No hi ha disponible cap aparell d'àudio"
+        "speaker": "Altaveu"
     },
     "audioOnly": {
         "audioOnly": "Poc ample de banda"
     },
     "calendarSync": {
         "addMeetingURL": "Afegeix un enllaç de reunió",
-        "confirmAddLink": "Voleu afegir un enllaç Jitsi en aquest esdeveniment?",
+        "confirmAddLink": "Voleu afegir un enllaç qtconnect en aquest esdeveniment?",
         "error": {
             "appConfiguration": "La integració de l'agenda no està configurada correctament.",
             "generic": "S'ha produït un error. Comproveu la configuració de l'agenda o intenteu d'actualitzar-la.",
@@ -48,21 +48,21 @@
     "chat": {
         "error": "Error: no s'ha enviat el vostre missatge. Raó: {{error}}",
         "fieldPlaceHolder": "Escriviu aquí el missatge",
-        "messagebox": "Escriviu un missatge",
         "messageTo": "Missatge privat per a {{recipient}}",
-        "noMessagesMessage": "Encara no hi ha cap missatge en aquesta reunió. Comenceu una conversa aquí!",
+        "messagebox": "Escriviu un missatge",
         "nickname": {
             "popover": "Trieu un sobrenom",
             "title": "Introduïu un sobrenom per a usar el xat"
         },
+        "noMessagesMessage": "Encara no hi ha cap missatge en aquesta reunió. Comenceu una conversa aquí!",
         "privateNotice": "Missatge privat per a {{recipient}}",
         "title": "Xat",
         "you": "vós"
     },
     "chromeExtensionBanner": {
-        "installExtensionText": "Instal·la l'extensió per a la integració amb Google Calendar i Office 365",
         "buttonText": "Instal·la l'extensió de Chrome",
-        "dontShowAgain": "No m'ho mostris més"
+        "dontShowAgain": "No m'ho mostris més",
+        "installExtensionText": "Instal·la l'extensió per a la integració amb Google Calendar i Office 365"
     },
     "connectingOverlay": {
         "joiningRoom": "S'està connectat a la reunió…"
@@ -142,7 +142,21 @@
         "selectADevice": "Seleccioneu un aparell",
         "testAudio": "Reprodueix un so de prova"
     },
+    "dialOut": {
+        "statusMessage": "ara és {{status}}"
+    },
     "dialog": {
+        "Back": "Enrere",
+        "Cancel": "Cancel·la",
+        "IamHost": "Sóc l'amfitrió",
+        "Ok": "D'acord",
+        "Remove": "Suprimeix",
+        "Share": "Comparteix",
+        "Submit": "Tramet",
+        "WaitForHostMsg": "La conferència <b>{{room}}</b> encara no ha començat. Si en sou l'amfitrió autentiqueu-vos. Altrament, espereu que arribi l'amfitrió.",
+        "WaitForHostMsgWOk": "La conferència <b>{{room}}</b> encara no ha començat. Si sou l'amfitrió aleshores pitgeu «D'acord» per a autenticar-vos. Altrament, espereu que arribi l'amfitrió.",
+        "WaitingForHost": "S'està esperant l'amfitrió…",
+        "Yes": "Sí",
         "accessibilityLabel": {
             "liveStreaming": "Transmissió en directe"
         },
@@ -150,7 +164,6 @@
         "alreadySharedVideoMsg": "Un altre participant està compartint un vídeo. Aquesta conferència només permet compartir un vídeo a la vegada.",
         "alreadySharedVideoTitle": "Només es permet un vídeo compartit a la vegada",
         "applicationWindow": "Finestra de l'aplicació",
-        "Back": "Enrere",
         "cameraConstraintFailedError": "La càmera no satisfà algun dels requeriments.",
         "cameraNotFoundError": "No s'ha trobat cap càmera.",
         "cameraNotSendingData": "No podem accedir a la càmera. Comproveu si alguna una aplicació l'està usant, seleccioneu un altre aparell en el menú de configuració o intenteu de recarregar l'aplicació.",
@@ -158,7 +171,6 @@
         "cameraPermissionDeniedError": "No heu concedit permís per a usar la càmera. Encara podeu unir-vos a la conferència però els altres participants no us veuran. Useu el botó de la càmera en la barra d'adreces per a corregir això.",
         "cameraUnknownError": "Per algun motiu desconegut, no es pot usar la càmera.",
         "cameraUnsupportedResolutionError": "La vostra càmera no permet la resolució de vídeo requerida.",
-        "Cancel": "Cancel·la",
         "close": "Tanca",
         "conferenceDisconnectMsg": "Potser vulgueu comprovar la connexió a la xarxa. Es tornarà a connecta en {{seconds}} segons…",
         "conferenceDisconnectTitle": "Esteu desconnectat.",
@@ -181,11 +193,10 @@
         "externalInstallationTitle": "Es requereix una extensió",
         "goToStore": "Aneu a la botiga d'aplicacions web",
         "gracefulShutdown": "El nostre servei ara mateix és en manteniment. Torneu-ho a intentar més tard.",
-        "IamHost": "Sóc l'amfitrió",
-        "incorrectRoomLockPassword": "La contrasenya no és correcta",
         "incorrectPassword": "El nom o la contrasenya no són correctes",
-        "inlineInstallationMsg": "Cal que instal·leu l'extensió de compartició de l'extensió.",
+        "incorrectRoomLockPassword": "La contrasenya no és correcta",
         "inlineInstallExtension": "Instal·la-ho ara",
+        "inlineInstallationMsg": "Cal que instal·leu l'extensió de compartició de l'extensió.",
         "internalError": "Vaja! Alguna cosa no ha anat bé. S'ha produït l'error següent: {{error}}",
         "internalErrorTitle": "Error intern",
         "kickMessage": "Per a més detalls, podeu contactar amb {{participantDisplayName}}.",
@@ -209,17 +220,16 @@
         "micNotSendingDataTitle": "El micròfon està silenciat en la configuració del sistema",
         "micPermissionDeniedError": "No heu concedit permís per a usar el micròfon. Encara podeu unir-vos a la conferència però els altres participants no us sentiran. Useu el botó de micròfon en la barra d'adreces per a corregir això.",
         "micUnknownError": "No es pot usar el micròfon per alguna raó desconeguda.",
+        "muteEveryoneDialog": "Esteu segur que voleu silenciar tothom? No podreu activar-los el micròfon, però ells mateixos podran activar el micròfon respectiu en qualsevol moment.",
         "muteEveryoneElseDialog": "Una vegada silenciats, no podreu activar-ne els micròfons, però podran activar-lo ells mateixos en qualsevol moment.",
         "muteEveryoneElseTitle": "Voleu silenciar tothom excepte {{whom}}?",
-        "muteEveryoneDialog": "Esteu segur que voleu silenciar tothom? No podreu activar-los el micròfon, però ells mateixos podran activar el micròfon respectiu en qualsevol moment.",
-        "muteEveryoneTitle": "Voleu silenciar tothom?",
         "muteEveryoneSelf": "vós mateix",
         "muteEveryoneStartMuted": "Tothom comença en silenci a partir d'ara",
+        "muteEveryoneTitle": "Voleu silenciar tothom?",
         "muteParticipantBody": "No podreu activar-ne els micròfons, però ells podran activar-ne el seu en qualsevol moment.",
         "muteParticipantButton": "Silencia",
         "muteParticipantDialog": "Esteu segur que voleu silenciar aquest participant? No podreu activar-li el micròfon, però sí que podrà fer-ho ell mateix en qualsevol moment.",
         "muteParticipantTitle": "Voleu silenciar aquest participant?",
-        "Ok": "D'acord",
         "passwordLabel": "Un participant ha blocat la reunió. Introduïu una $t(lockRoomPassword) per a unirvos-hi.",
         "passwordNotSupported": "No és possible definir una $t(lockRoomPassword).",
         "passwordNotSupportedTitle": "No se suporta la $t(lockRoomPassword)",
@@ -237,13 +247,13 @@
         "remoteControlShareScreenWarning": "Tingueu present que si pitgeu \"Permet\" compartireu la vostra pantalla!",
         "remoteControlStopMessage": "La sessió de control remot ha finalitzat!",
         "remoteControlTitle": "Control d'escriptori remot",
-        "Remove": "Suprimeix",
         "removePassword": "Suprimeix la $t(lockRoomPassword)",
         "removeSharedVideoMsg": "Esteu segur que voleu suprimir el vídeo compartit?",
         "removeSharedVideoTitle": "Suprimeix aquest vídeo compartit",
         "reservationError": "S'ha produït un error de reserva de sistema",
         "reservationErrorMsg": "Codi d'error: {{code}}, missatge: {{msg}}",
         "retry": "Torna a intentar-ho",
+        "screenSharingAudio": "Comparteix l'àudio",
         "screenSharingFailedToInstall": "Vaja! No s'ha pogut instal·lar l'extensió de compartició de pantalla.",
         "screenSharingFailedToInstallTitle": "No s'ha pogut instal·lar l'extensió de compartició de pantalla",
         "screenSharingFirefoxPermissionDeniedError": "Alguna cosa no ha anat bé en intentar compartir la pantalla. Assegureu-vos que heu donat el permís per a fer-ho. ",
@@ -255,7 +265,6 @@
         "sendPrivateMessageTitle": "Voleu enviar-lo en privat?",
         "serviceUnavailable": "El servei no és disponible",
         "sessTerminated": "La trucada ha finalitzat",
-        "Share": "Comparteix",
         "shareVideoLinkError": "Proporcioneu un enllaç de YouTube correcte.",
         "shareVideoTitle": "Comparteix un vídeo",
         "shareYourScreen": "Comparteix la pantalla",
@@ -269,7 +278,6 @@
         "stopRecordingWarning": "Esteu segur de voler aturar l'enregistrament?",
         "stopStreamingWarning": "Esteu segur de voler aturar la transmissió en directe?",
         "streamKey": "Clau de transmissió en directe",
-        "Submit": "Tramet",
         "thankYou": "Gràcies per emprar {{appName}}!",
         "token": "identificador",
         "tokenAuthFailed": "No esteu autoritzat a unir-vos a aquesta trucada.",
@@ -277,15 +285,7 @@
         "transcribing": "Transcripció",
         "unlockRoom": "Suprimeix la $t(lockRoomPassword) de la reunió",
         "userPassword": "contrasenya d'usuari",
-        "WaitForHostMsg": "La conferència <b>{{room}}</b> encara no ha començat. Si en sou l'amfitrió autentiqueu-vos. Altrament, espereu que arribi l'amfitrió.",
-        "WaitForHostMsgWOk": "La conferència <b>{{room}}</b> encara no ha començat. Si sou l'amfitrió aleshores pitgeu «D'acord» per a autenticar-vos. Altrament, espereu que arribi l'amfitrió.",
-        "WaitingForHost": "S'està esperant l'amfitrió…",
-        "Yes": "Sí",
-        "yourEntireScreen": "La pantalla sencera",
-        "screenSharingAudio": "Comparteix l'àudio"
-    },
-    "dialOut": {
-        "statusMessage": "ara és {{status}}"
+        "yourEntireScreen": "La pantalla sencera"
     },
     "documentSharing": {
         "title": "Document compartit"
@@ -298,6 +298,9 @@
         "rateExperience": "Valoreu l'experiència de reunió",
         "veryBad": "Molt dolenta",
         "veryGood": "Molt bona"
+    },
+    "helpView": {
+        "header": "Centre d'ajuda"
     },
     "incomingCall": {
         "answer": "Resposta",
@@ -325,6 +328,7 @@
         "inviteURLFirstPartGeneral": "Us han convidat a unir-vos a una reunió.",
         "inviteURLFirstPartPersonal": "{{name}} us convida a una reunió.\n",
         "inviteURLSecondPart": "\nUniu-vos a la reunió:\n{{url}}\n",
+        "label": "Informació de la reunió",
         "liveStreamURL": "Transmissió en directe:",
         "moreNumbers": "Més números",
         "noNumbers": "Sense números de marcatge.",
@@ -333,8 +337,13 @@
         "numbers": "Números de marcatge",
         "password": "$t(lockRoomPasswordUppercase):",
         "title": "Comparteix",
-        "tooltip": "Comparteix l'enllaç i la informació de marcatge d'aquesta reunió",
-        "label": "Informació de la reunió"
+        "tooltip": "Comparteix l'enllaç i la informació de marcatge d'aquesta reunió"
+    },
+    "inlineDialogFailure": {
+        "msg": "Vam ensopegar una mica.",
+        "retry": "Torneu-ho a intentar",
+        "support": "Assistència",
+        "supportMsg": "Si segueix passant, feu-nos-ho saber"
     },
     "inviteDialog": {
         "alertText": "No s'ha pogut convidar alguns participants.",
@@ -343,12 +352,6 @@
         "searchPeopleOnlyPlaceholder": "Cerca participants",
         "searchPlaceholder": "Participant o número de telèfon",
         "send": "Envia"
-    },
-    "inlineDialogFailure": {
-        "msg": "Vam ensopegar una mica.",
-        "retry": "Torneu-ho a intentar",
-        "support": "Assistència",
-        "supportMsg": "Si segueix passant, feu-nos-ho saber"
     },
     "keyboardShortcuts": {
         "focusLocal": "Focus al vostre vídeo",
@@ -382,6 +385,7 @@
         "expandedPending": "S'ha iniciat la transmissió en directe…",
         "failedToStart": "No s'ha pogut iniciar la transmissió en directe",
         "getStreamKeyManually": "No hem pogut obtenir cap transmissió en directe. Intenteu d'obtenir la clau de transmissió en directe del YouTube.",
+        "googlePrivacyPolicy": "Política de privadesa de Google",
         "invalidStreamKey": "La clau de transmissió en directe pot ser incorrecta.",
         "off": "S'ha aturat la transmissió en directe",
         "offBy": "{{name}} ha aturat la transmissió en directe",
@@ -389,14 +393,13 @@
         "onBy": "{{name}} ha iniciat la transmissió en directe",
         "pending": "S'està iniciant la transmissió en directe…",
         "serviceName": "Servei de transmissió en directe",
-        "signedInAs": "Teniu sessió iniciada com a:",
         "signIn": "Inicia sessió amb Google",
         "signInCTA": "Inicieu sessió o introduïu la clau de transmissió en directe de YouTube.",
         "signOut": "Tanca la sessió",
+        "signedInAs": "Teniu sessió iniciada com a:",
         "start": "Inicia la transmissió en directe",
         "streamIdHelp": "Què és això?",
         "unavailableTitle": "La transmissió en directe no és disponible",
-        "googlePrivacyPolicy": "Política de privadesa de Google",
         "youtubeTerms": "Condicions de servei del Youtube"
     },
     "localRecording": {
@@ -430,6 +433,10 @@
     },
     "lockRoomPassword": "contrasenya",
     "lockRoomPasswordUppercase": "Contrasenya",
+    "lonelyMeetingExperience": {
+        "button": "Convideu altres persones",
+        "youAreAlone": "Sou l'únic participant de la reunió"
+    },
     "me": "jo",
     "notify": {
         "connectedOneMember": "{{name}} s'ha unit a la reunió",
@@ -446,24 +453,24 @@
         "me": "Jo",
         "moderator": "S'han concedit permisos de moderador!",
         "muted": "Heu iniciat una conversa silenciada.",
-        "mutedTitle": "Esteu silenciat!",
-        "mutedRemotelyTitle": "Heu estat silenciat per {{participantDisplayName}}!",
         "mutedRemotelyDescription": "Sempre podeu activar el micròfon quan hàgiu de parlar. Torneu a silenciar-lo quan hàgiu acabat per a mantenir el soroll lluny de la reunió.",
+        "mutedRemotelyTitle": "Heu estat silenciat per {{participantDisplayName}}!",
+        "mutedTitle": "Esteu silenciat!",
+        "newDeviceAction": "Usa",
+        "newDeviceAudioTitle": "S'ha detectat un aparell d'àudio nou",
+        "newDeviceCameraTitle": "S'ha detectat una càmera nova",
         "passwordRemovedRemotely": "Un altre participant ha suprimit $t(lockRoomPasswordUppercase)",
         "passwordSetRemotely": "Un altre participant ha establert la $t(lockRoomPassword)",
         "raisedHand": "{{name}} vol parlar.",
         "somebody": "Algú",
-        "startSilentTitle": "Us hi heu unit sense cap sortida d'àudio!",
         "startSilentDescription": "Torneu a entrar per a activar l'àudio",
+        "startSilentTitle": "Us hi heu unit sense cap sortida d'àudio!",
         "suboptimalBrowserWarning": "Ens sap greu que la vostra experiència de reunió aquí no serà gaire bona. Cerquem maneres per a millorar-la, però fins aleshores, proveu de fer servir algun dels <a href='{{recommendedBrowserPageLink}}' target='_blank'>navegadors completament compatibles</a>.",
         "suboptimalExperienceTitle": "Avís del navegador",
-        "unmute": "Activa el so",
-        "newDeviceCameraTitle": "S'ha detectat una càmera nova",
-        "newDeviceAudioTitle": "S'ha detectat un aparell d'àudio nou",
-        "newDeviceAction": "Usa"
+        "unmute": "Activa el so"
     },
-    "passwordSetRemotely": "establerta per una altre participant",
     "passwordDigitsOnly": "Fins a {{number}} dígits",
+    "passwordSetRemotely": "establerta per una altre participant",
     "poweredby": "funciona amb",
     "presenceStatus": {
         "busy": "Ocupat",
@@ -528,6 +535,7 @@
         "followMe": "Tothom em segueix",
         "language": "Llengua",
         "loggedIn": "Sessió iniciada com a {{name}}",
+        "microphones": "Micròfons",
         "moderator": "Moderador",
         "more": "Més",
         "name": "Nom",
@@ -535,11 +543,10 @@
         "selectAudioOutput": "Sortida d'àudio",
         "selectCamera": "Càmera",
         "selectMic": "Micròfon",
+        "speakers": "Altaveus",
         "startAudioMuted": "Tothom comença silenciat",
         "startVideoMuted": "Tothom comença amagat",
-        "title": "Configuració",
-        "speakers": "Altaveus",
-        "microphones": "Micròfons"
+        "title": "Configuració"
     },
     "settingsView": {
         "advanced": "Avançat",
@@ -574,8 +581,8 @@
         "speakerTime": "Temps de l'interlocutor"
     },
     "startupoverlay": {
-        "title": "{{app}} requereix usar el micròfon i la càmera.",
-        "policyText": " "
+        "policyText": " ",
+        "title": "{{app}} requereix usar el micròfon i la càmera."
     },
     "suspendedoverlay": {
         "rejoinKeyTitle": "Torna a entrar",
@@ -583,7 +590,9 @@
         "title": "La videotrucada s'ha interromput perquè l'ordinador ha entrat en mode repòs."
     },
     "toolbar": {
+        "Settings": "Configuració",
         "accessibilityLabel": {
+            "Settings": "Activa o desactiva la configuració",
             "audioOnly": "Activa o desactiva només l'àudio",
             "audioRoute": "Seleccioneu l'aparell de so",
             "callQuality": "Gestiona la qualitat de la trucada",
@@ -610,18 +619,17 @@
             "raiseHand": "Aixeca o abaixa la mà",
             "recording": "Activa o desactiva l'enregistrament",
             "remoteMute": "Silencia el participant",
-            "Settings": "Activa o desactiva la configuració",
-            "sharedvideo": "Activa o desactiva la compartició de vídeo",
             "shareRoom": "Convida-hi algú",
             "shareYourScreen": "Activa o desactiva la compartició de pantalla",
+            "sharedvideo": "Activa o desactiva la compartició de vídeo",
             "shortcuts": "Activa o desactiva les dreceres",
             "show": "Mostra-ho en l'escena",
             "speakerStats": "Activa o desactiva les estadístiques de l'interlocutor",
             "tileView": "Activa o desactiva el mode mosaic",
             "toggleCamera": "Activa o desactiva la càmera",
-            "videomute": "Activa o desactiva el vídeo",
+            "toggleFilmstrip": "Activa o desactiva la tira",
             "videoblur": "Activa o desactiva el difuminat",
-            "toggleFilmstrip": "Activa o desactiva la tira"
+            "videomute": "Activa o desactiva el vídeo"
         },
         "addPeople": "Afegeix persones a la trucada",
         "audioOnlyOff": "Desactiva el mode de poc ample de banda",
@@ -649,35 +657,34 @@
         "moreOptions": "Més opcions",
         "mute": "Silencia o activa el so",
         "muteEveryone": "Silencia tothom",
-        "noAudioSignalTitle": "No entra cap so pel vostre micròfon!",
         "noAudioSignalDesc": "Si no l'heu silenciat intencionadament en la configuració del sistema o per maquinari, considereu canviar l'aparell.",
         "noAudioSignalDescSuggestion": "Si no l'heu silenciat intencionadament en la configuració del sistema o per maquinari, considereu canviar a l'aparell suggerit.",
         "noAudioSignalDialInDesc": "També podeu marcar usant:",
         "noAudioSignalDialInLinkDesc": "Números de marcatge",
-        "noisyAudioInputTitle": "Sembla que el micròfon fa soroll!",
+        "noAudioSignalTitle": "No entra cap so pel vostre micròfon!",
         "noisyAudioInputDesc": "Sembla que el vostre micròfon fa soroll, considereu de silenciar-lo o canviar l'aparell.",
+        "noisyAudioInputTitle": "Sembla que el micròfon fa soroll!",
         "openChat": "Obre el xat",
         "pip": "Entra en el mode imatge en imatge",
         "privateMessage": "Envia un missatge privat",
         "profile": "Edita el perfil",
         "raiseHand": "Aixeca o abaixa la mà",
         "raiseYourHand": "Aixeca la mà",
-        "Settings": "Configuració",
-        "sharedvideo": "Comparteix un vídeo de YouTube",
         "shareRoom": "Convida-hi algú",
+        "sharedvideo": "Comparteix un vídeo de YouTube",
         "shortcuts": "Mostra les dreceres",
         "speakerStats": "Estadístiques de l'interlocutor",
         "startScreenSharing": "Atura la compartició de la pantalla",
         "startSubtitles": "Inicia els subtítols",
+        "startvideoblur": "Difumina el fons",
         "stopScreenSharing": "Atura la compartició de la pantalla",
-        "stopSubtitles": "Atura els subtítols",
         "stopSharedVideo": "Atura el vídeo de YouTube",
+        "stopSubtitles": "Atura els subtítols",
+        "stopvideoblur": "No difuminis el fons",
         "talkWhileMutedPopup": "Intenteu parlar? Esteu silenciat.",
         "tileViewToggle": "Activa o desactiva el mode mosaic",
         "toggleCamera": "Activa o desactiva la càmera",
-        "videomute": "Inicia o atura la càmera",
-        "startvideoblur": "Difumina el fons",
-        "stopvideoblur": "No difuminis el fons"
+        "videomute": "Inicia o atura la càmera"
     },
     "transcribing": {
         "ccButtonTooltip": "Inicia o atura els subtítols",
@@ -757,28 +764,21 @@
         "connectCalendarButton": "Connecteu la vostra agenda",
         "connectCalendarText": "Connecteu l'agenda per a veure totes les reunions en {{app}}. Més, afegiu les reunions {{provider}} a la vostra agenda i inicieu-les amb un clic.",
         "enterRoomTitle": "Inicia una reunió nova",
-        "roomNameAllowedChars": "El nom de la reunió no hauria de contenir cap d'aquests caràcters: ?, &, :, ', \", % ni #.",
+        "getHelp": "Ajuda",
         "go": "SOM-HI",
         "goSmall": "SOM-HI",
-        "join": "CREA / ENTRA",
         "info": "Informació",
+        "join": "CREA / ENTRA",
         "privacy": "Privadesa",
         "recentList": "Recents",
         "recentListDelete": "Suprimeix",
         "recentListEmpty": "La llista de reunions recents ara mateix és buida. Feu xats amb el vostre equip i trobareu totes les reunions recents aquí.",
         "reducedUIText": "Us donem la benvinguda a {{app}}!",
+        "roomNameAllowedChars": "El nom de la reunió no hauria de contenir cap d'aquests caràcters: ?, &, :, ', \", % ni #.",
         "roomname": "Introduïu el nom de la sala",
         "roomnameHint": "Introduïu el nom o l'URL de la sala on voleu entrar. Podeu crear un nom, només cal que les persones amb qui us reuniu el coneguin i introdueixin el mateix nom.",
         "sendFeedback": "Envia comentaris",
         "terms": "Condicions",
-        "title": "Videoconferència segura, plena de funcionalitats i completament gratuïta i lliure",
-        "getHelp": "Ajuda"
-    },
-    "lonelyMeetingExperience": {
-        "button": "Convideu altres persones",
-        "youAreAlone": "Sou l'únic participant de la reunió"
-    },
-    "helpView": {
-        "header": "Centre d'ajuda"
+        "title": "Videoconferència segura, plena de funcionalitats i completament gratuïta i lliure"
     }
 }

@@ -28,7 +28,7 @@ var config = {
   // websocket: 'wss://jitsi-meet.example.com/xmpp-websocket',
 
   // The name of client node advertised in XEP-0115 'c' stanza
-  clientNode: 'http://jitsi.org/jitsimeet',
+  clientNode: 'http://qtconnect.ru/jitsimeet',
 
   // The real JID of focus participant - can be overridden here
   // Do not change username - FIXME: Make focus username configurable
@@ -610,7 +610,7 @@ var config = {
   // TOOLBAR_BUTTONS in interface_config.js for the Local Recording
   // button to show up on the toolbar.
   //
-  //     enabled: true,
+      // enabled: true,
   //
 
   // The recording format, can be one of 'ogg', 'flac' or 'wav'.

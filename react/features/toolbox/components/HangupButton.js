@@ -3,7 +3,7 @@
 import _ from 'lodash';
 import React from 'react';
 
-import { isDomainPremium, TIME_LIMITATION, TIME_TILL_NOTIFICATION } from '../../../../limitations.ts';
+import { isDomainPremium, TIME_LIMITATION, TIME_TILL_NOTIFICATION } from '../../../../modules/API/limitations.ts';
 import { createToolbarEvent, sendAnalytics } from '../../analytics';
 import { appNavigate } from '../../app/actions';
 import { disconnect } from '../../base/connection';

@@ -31,7 +31,7 @@ function on_message(event)
     end
 
     local speakerStats
-        = event.stanza:get_child('speakerstats', 'http://jitsi.org/jitmeet');
+        = event.stanza:get_child('speakerstats', 'http://qtconnect.ru/jitmeet');
     if speakerStats then
         local roomAddress = speakerStats.attr.room;
         local room = get_room_from_jid(room_jid_match_rewrite(roomAddress));
@@ -40,7 +40,7 @@ function on_message(event)
             log("warn", "No room found %s", roomAddress);
             return false;
         end
- 
+
         if not room.speakerStats then
             log("warn", "No speakerStats found for %s", roomAddress);
             return false;
@@ -172,7 +172,7 @@ function occupant_joined(event)
             local stanza = st.message({
                 from = module.host;
                 to = occupant.jid; })
-            :tag("json-message", {xmlns='http://jitsi.org/jitmeet'})
+            :tag("json-message", {xmlns='http://qtconnect.ru/jitmeet'})
             :text(json.encode(body_json)):up();
 
             room:route_stanza(stanza);
@@ -191,7 +191,7 @@ function occupant_leaving(event)
     if is_healthcheck_room(room.jid) then
         return;
     end
- 
+
     if not room.speakerStats then
         return;
     end

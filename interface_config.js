@@ -117,10 +117,10 @@ var interfaceConfig = {
     HIDE_INVITE_MORE_HEADER: false,
 
     INITIAL_TOOLBAR_TIMEOUT: 20000,
-    JITSI_WATERMARK_LINK: 'https://jitsi.org',
+    JITSI_WATERMARK_LINK: 'https://qtconnect.ru',
 
     LANG_DETECTION: true, // Allow i18n to detect the system language
-    LIVE_STREAMING_HELP_LINK: 'https://jitsi.org/live', // Documentation reference for the live streaming feature.
+    LIVE_STREAMING_HELP_LINK: 'https://qtconnect.ru/live', // Documentation reference for the live streaming feature.
     LOCAL_THUMBNAIL_RATIO: 16 / 9, // 16:9
 
     /**
@@ -182,7 +182,7 @@ var interfaceConfig = {
      */
     // SHARING_FEATURES: ['email', 'url', 'dial-in', 'embed'],
 
-    SHOW_BRAND_WATERMARK: false,
+    SHOW_BRAND_WATERMARK: true,
 
     /**
     * Decides whether the chrome extension banner should be rendered on the landing page and during the meeting.
@@ -192,7 +192,7 @@ var interfaceConfig = {
     SHOW_CHROME_EXTENSION_BANNER: false,
 
     SHOW_DEEP_LINKING_IMAGE: false,
-    SHOW_JITSI_WATERMARK: true,
+    SHOW_JITSI_WATERMARK: false,
     SHOW_POWERED_BY: false,
     SHOW_PROMOTIONAL_CLOSE_PAGE: false,
 
@@ -200,7 +200,7 @@ var interfaceConfig = {
      * If indicated some of the error dialogs may point to the support URL for
      * help.
      */
-    SUPPORT_URL: 'https://community.jitsi.org/',
+    SUPPORT_URL: 'https://community.qtconnect.ru/',
 
     TOOLBAR_ALWAYS_VISIBLE: true,
 

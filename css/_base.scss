@@ -131,17 +131,15 @@ form {
 .watermark {
     display: block;
     position: absolute;
-    top: 15;
     width: $watermarkWidth;
-    height: $watermarkHeight;
     background-size: contain;
     background-repeat: no-repeat;
     z-index: $zindex2;
 }
 
 .videocontainer .leftwatermark {
-    top: 30px;
-    left: 60px;
+    top: 24px;
+    left: 48px;
 }
 
 .leftwatermark {

@@ -8,7 +8,7 @@ import { CalendarList } from '../../calendar-sync';
 import { connect } from '../../base/redux';
 import { default as ButtonIcon } from '../../../../images/button-icon.svg';
 import { Icon, IconWarning } from '../../base/icons';
-import { isDomainPremium, defaultDomain, premiumDomain, isUserPaid } from '../../../../limitations.ts';
+import { isDomainPremium, defaultDomain, premiumDomain, isUserPaid } from '../../../../modules/API/limitations.ts';
 import { isMobileBrowser } from '../../base/environment/utils';
 import { RecentList } from '../../recent-list';
 import { SettingsButton, SETTINGS_TABS } from '../../settings';
@@ -286,12 +286,8 @@ class WelcomePage extends AbstractWelcomePage {
           </div>
         )}
 
-        {isLoginPromptOpen
-          && <Login closeLoginPrompt={() => { this.changeLoginPromptVisibility(false); }} />
-        }
-        {isRegisterWindowOpen
-          && <Register closeRegisterWindow={() => { this.changeRegisterWindowVisibility(false); }} />
-        }
+        {/* {isLoginPromptOpen && <Login onCloseLoginPrompt={() => { this.changeLoginPromptVisibility(false); }} /> } */}
+        {/* {isRegisterWindowOpen && <Register closeRegisterWindow={() => { this.changeRegisterWindowVisibility(false); }} /> } */}
 
         <nav>
           <img
@@ -310,7 +306,7 @@ class WelcomePage extends AbstractWelcomePage {
               display: 'flex',
               alignItems: 'center'
             }}>
-            {localStorage.getItem('username')
+            {/* {localStorage.getItem('username')
               ? <button
                 className='login-button logout-button'
                 onClick={() => {
@@ -331,7 +327,7 @@ class WelcomePage extends AbstractWelcomePage {
                   Регистрация
                 </button>
               </div>
-            }
+            } */}
 
             <SettingsButton
               defaultTab={SETTINGS_TABS.CALENDAR} />

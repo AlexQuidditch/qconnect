@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 
-import { isDomainPremium } from '../../../../limitations.ts';
+import { isDomainPremium } from '../../../../modules/API/limitations.ts';
 import { openDialog, Dialog } from '../../base/dialog';
 import { IconCrown } from '../../base/icons';
 import {
